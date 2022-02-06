@@ -1,0 +1,10 @@
+<form class="example-form">
+  <mat-form-field style="width: 100%">
+    <mat-label>Search Country..</mat-label>
+    <input
+      (input)="onSearchUpdate($event)"
+      [disabled]="isSearchDisable"
+      matInput
+    />
+  </mat-form-field>
+</form>

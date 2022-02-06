@@ -1,0 +1,72 @@
+.list-card {
+  margin: 16px 0;
+}
+
+.cardCountries {
+  box-shadow: 0px 2px 1px 1px rgba(0, 0, 0, 0.25);
+  transition: 0.3s ease-in-out;
+  cursor: pointer;
+
+  &:hover {
+    box-shadow: 2px 4px 4px 2px rgba(0, 0, 0, 0.25);
+    transform: translateY(-1px);
+  }
+  h4 {
+    color: #1862f7;
+    font-weight: bold;
+    font-size: 16px;
+  }
+
+  p {
+    font-size: 14px;
+  }
+
+  span.population {
+    font-size: 12px;
+  }
+
+  span.population,
+  span.subregion {
+    color: #999;
+  }
+
+  span.capital,
+  span.popNumber {
+    font-weight: 500;
+  }
+}
+
+.loadMore {
+  display: flex;
+  justify-content: center;
+  margin-top: 24px;
+
+  button {
+    &:disabled {
+      background-color: #eee;
+      cursor: not-allowed;
+    }
+    &:hover:not(:disabled) {
+      background-color: #1862f7;
+    }
+  }
+}
+
+.spinner {
+  display: flex;
+  justify-content: center;
+  margin: 150px 0;
+}
+
+.notFound {
+  text-align: center;
+  color: #888;
+  padding: 150px 0;
+}
+
+.total {
+  display: flex;
+  justify-content: flex-end;
+  font-size: 12px;
+  color: #999;
+}

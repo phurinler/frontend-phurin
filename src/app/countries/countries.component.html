@@ -1,0 +1,10 @@
+<div class="app-countries">
+  <app-filter
+    (searchName)="getSearchName($event)"
+    [isSearchDisable]="!isLoading"
+  ></app-filter>
+  <app-list
+    [childSearchName]="parentSearchName"
+    [childCountriesAll]="parentCountriesAll"
+  ></app-list>
+</div>

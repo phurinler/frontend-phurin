@@ -1,0 +1,47 @@
+<div *ngIf="!isLoading" class="spinner">
+  <mat-spinner></mat-spinner>
+</div>
+<div *ngIf="isLoading">
+  <div class="total">
+    <span>Total: {{ max }}</span>
+  </div>
+  <div *ngIf="isSearchEmpty" class="notFound">
+    <h2>Not Found.</h2>
+  </div>
+  <div *ngFor="let country of countries" class="list-card">
+    <mat-card class="cardCountries">
+      <div class="row">
+        <div class="col-8">
+          <h4>{{ country.name }}</h4>
+        </div>
+        <div class="col-4 text-end">
+          <p><span class="population">Population</span></p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-8">
+          <p>
+            <span class="capital">{{ country.capital }}, </span>
+            <span class="subregion">{{ country.subregion }}</span>
+          </p>
+        </div>
+        <div class="col-4 text-end">
+          <p>
+            <span class="popNumber">{{ country.population }}</span>
+          </p>
+        </div>
+      </div>
+    </mat-card>
+  </div>
+</div>
+
+<div class="loadMore">
+  <button
+    mat-raised-button
+    color="primary"
+    (click)="onLoadMore()"
+    [disabled]="loadMax === 0 || loadMax >= max"
+  >
+    LOAD MORE (+10)
+  </button>
+</div>
